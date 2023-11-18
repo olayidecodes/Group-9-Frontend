@@ -2,44 +2,30 @@
 
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { ArrowRight, Code, Image, MessageSquare, Music, Video } from "lucide-react"
+import { ArrowRight, Code, Image, MessageSquare, Music, Video, ArrowUpFromLine, Brain, LineChart } from "lucide-react"
 import { useRouter } from 'next/navigation'
 
 const tools = [
   {
-    label: 'Conversation',
-    icon: MessageSquare,
+    label: 'Make Predictions',
+    icon: ArrowUpFromLine,
     color: 'text-violet-500',
     bgColor:  'bg-violet-500/10',
-    href: '/conversation'
+    href: '/make-predictions'
   }, 
   {
-    label: 'Music Generation',
-    icon: Music,
+    label: 'Retrain Model',
+    icon: Brain,
     color: 'text-emerald-500',
     bgColor:  'bg-emerald-500/10',
-    href: '/music'
+    href: '/retrain-model'
   },
   {
-    label: 'Image Generation',
-    icon: Image,
+    label: 'Visualize Medical Records',
+    icon: LineChart,
     color: 'text-pink-700',
     bgColor:  'bg-pink-700/10',
-    href: '/image'
-  },
-  {
-    label: 'Video Generation',
-    icon: Video,
-    color: 'text-orange-700',
-    bgColor:  'bg-orange-700/10',
-    href: '/video'
-  },
-  {
-    label: 'Code Generation',
-    icon: Code,
-    color: 'text-green-700',
-    bgColor:  'bg-green-700/10',
-    href: '/code'
+    href: '/visualize-medical-records'
   },
 ]
 
@@ -49,10 +35,10 @@ const DashboardPage = () => {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore the power of AI
+          Explore the power of our Model
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Chat with the smartest AI - Experience the power of AI
+          Make predictions and take control of your healthcare system
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">

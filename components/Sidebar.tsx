@@ -6,7 +6,7 @@ import { Montserrat } from 'next/font/google'
 import { usePathname } from 'next/navigation'
 
 import { cn } from '@/lib/utils'
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from 'lucide-react'
+import { LayoutDashboard, Settings, ArrowUpFromLine, Brain, LineChart } from 'lucide-react'
 
 const montserrat = Montserrat({
     weight: '600',
@@ -15,40 +15,28 @@ const montserrat = Montserrat({
 
 const routes = [
     {
-        label: 'Dashboard',
+        label: 'Home',
         icon: LayoutDashboard,
         href: '/dashboard',
         color: 'text-sky-500'
     },
     {
-        label: 'Conversation',
-        icon: MessageSquare,
-        href: '/conversation',
+        label: 'Make Predictions',
+        icon: ArrowUpFromLine,
+        href: '/make-predictions',
         color: 'text-violet-500'
     },
     {
-        label: 'Image Generation',
-        icon: ImageIcon,
-        href: '/image',
+        label: 'Retrain Model',
+        icon: Brain,
+        href: '/retrain-model',
         color: 'text-pink-700'
     },
     {
-        label: 'Video Generation',
-        icon: VideoIcon,
-        href: '/video',
+        label: 'Visualize Records',
+        icon: LineChart,
+        href: '/visualize-medical-records',
         color: 'text-orange-700'
-    },
-    {
-        label: 'Music Generation',
-        icon: Music,
-        href: '/music',
-        color: 'text-emerald-500'
-    },
-    {
-        label: 'Code Generation',
-        icon: Code,
-        href: '/code',
-        color: 'text-green-700'
     },
     {
         label: 'Settings',
@@ -73,7 +61,7 @@ const Sidebar = () => {
                 />
             </div>
             <h1 className={cn('text-2xl font-bold', montserrat.className)}>
-                Genius
+                Group 9
             </h1>
         </Link>
         <div className='space-y-1 '>
